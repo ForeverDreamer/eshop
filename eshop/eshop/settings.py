@@ -36,25 +36,25 @@ AUTH_USER_MODEL = 'users.UserProfile'
 # Application definition
 
 INSTALLED_APPS = [
-    'raven.contrib.django.raven_compat',  # sentry
+    # 'raven.contrib.django.raven_compat',  # sentry
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
-    'DjangoUeditor',    # Ueditor富文本编辑器
+    # 'DjangoUeditor',    # Ueditor富文本编辑器
     'goods.apps.GoodsConfig',
+    'users.apps.UsersConfig',
     'trade.apps.TradeConfig',
     'user_operation.apps.UserOperationConfig',
     'crispy_forms',  # xadmin必要插件
-    'xadmin',
+    # 'xadmin',
     'django_filters',
     'rest_framework',
     'corsheaders',    # 跨域请求
     'rest_framework.authtoken',
-    'social_django',  # 第三方集成
+    # 'social_django',  # 第三方集成
 ]
 
 MIDDLEWARE = [
@@ -85,8 +85,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
 
-                'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
+                # 'social_django.context_processors.backends',
+                # 'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -102,9 +102,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'eshop',
-        'USER':'root',
-        'PASSWORD':'root',
-		'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': '127.0.0.1',
         'PORT': '',
     },
     'OPTIONS': {
@@ -237,7 +237,7 @@ SOCIAL_AUTH_WEIBO_SECRET = ''
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/index/'
 
 
-import raven
+# import raven
 RAVEN_CONFIG = {
     'dsn': '',
     # If you are using git, you can also automatically configure the

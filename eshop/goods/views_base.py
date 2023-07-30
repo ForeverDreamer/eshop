@@ -4,7 +4,7 @@ __date__ = '2018/2/1 22:53'
 
 from django.views.generic.base import View
 
-from goods.models import Goods
+from .models import Goods
 
 class GoodsListView(View):
     def get(self,request):

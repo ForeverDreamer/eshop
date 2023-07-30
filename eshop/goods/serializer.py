@@ -3,8 +3,8 @@ __author__ = 'xojisi'
 from django.db.models import Q
 from rest_framework import serializers
 
-from goods.models import Goods, GoodsCategory, GoodsImage, Banner
-from goods.models import HotSearchWords, GoodsCategoryBrand, IndexAd
+from .models import Goods, GoodsCategory, GoodsImage, Banner
+from .models import HotSearchWords, GoodsCategoryBrand, IndexAd
 
 class BannerSerializer(serializers.ModelSerializer):
     class Meta:
